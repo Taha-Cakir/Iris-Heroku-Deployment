@@ -17,10 +17,11 @@ app = Flask(__name__)
 model_pk = pickle.load(open("flower-v1.pkl","rb"))
 
 
-@app.route('/api_predict', methods = ['POST','GET'])
+@app.route('/', methods = ['POST','GET'])
 def api_predict():
     if request.method == 'GET':
-        return "Please Send POST Request"
+     
+        return "Please Send POST Request" 
     elif request.method == 'POST':
         
         print("Hello" + str(request.get_json()))
